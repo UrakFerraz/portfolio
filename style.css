@@ -1,0 +1,121 @@
+body {
+	background: #777777;
+}
+
+
+.heroTitle {
+	padding: 50px 10vw;
+	flex-flow: column;
+}
+
+.heroTitle a {
+	margin: 20px auto;
+}
+
+.heroTitle h1 {
+	text-align: center;
+}
+
+
+.heroTitle h4 {
+	color: #fff;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.unit {
+	grid-template-columns: auto 1fr;
+	padding: 60px 0;
+	flex-flow: row wrap;
+}
+
+.unitText {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	width: 20vw;
+	min-width: 250px;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.unitImgsWrapper {
+	gap: 40px;
+	flex-grow: 6;
+	flex-shrink: 1;
+	flex-basis: 600px;
+}
+
+.sampleImage {
+	margin: 0 10px;
+}
+
+
+p {
+	text-align: center;
+}
+
+
+h3 {
+	color: var(--lightGrayColor);
+}
+
+p, h1, h2, a {
+	color: var(--extraLightGrayColor);
+}
+
+
+a {
+	line-height: 1;
+	padding: 15px;
+	border: 3px solid var(--extraLightGrayColor);
+	font-weight: var(--medium);
+	margin-top: 20px;
+}
+
+
+.telasTitle {
+	margin-top: 80px;
+	padding: 60px 10vw 0 10vw;
+	text-align: center;
+}
+
+.telasLead {
+	padding: 10px 10vw 30px 10vw;
+	text-align: center;
+}
+
+
+.telasImg {
+	width: 100%;
+	height: 300px;
+}
+
+
+.telas {
+	grid-template-rows: 300px auto;
+	grid-gap: 20px;
+	background-color: #fff;
+	padding: 20px;
+	flex: 1;
+	flex-basis: 380px;
+	margin: 10px;
+}
+
+.telas a {
+	justify-self: center;
+	color: var(--secondaryColor);
+	border: 3px solid var(--secondaryColor);
+}
+
+
+.telasWrapper {
+	flex-flow: row wrap;
+	padding: 0 30px;
+}
+
+
+a:hover {
+	background-color: var(--greenColor);
+}
