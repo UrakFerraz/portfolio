@@ -11,34 +11,7 @@
     <style amp-custom>
 
 
-:root {
-	--h1Size: clamp(1.8rem, 3.3vw, 3.4rem);
-	--h2Size: clamp(1.5rem, 2.5vw, 2.8rem);
-	--h3Size: clamp(1.3rem, 2.2vw, 2.5rem);
-	--h4Size: clamp(1.2rem, 2vw, 2rem);
-	--h5Size: clamp(1.1rem, 1.8vw, 1.7rem);
-	--pSize: clamp(1.1rem, 1.5vw, 1.3rem);
-	--spanSize: clamp(1rem, 1.3vw, 1rem);
-
-	--thin: 100;
-	--light: 300;
-	--regular: 400;
-	--medium: 500;
-	--bold: 700;
-	--extra-bold: 800;
-	--black: 900;
-
-	--f1: #FFFFFF;
-	--primaryColor: #BE2623;
-	--secondaryColor: #0E3746;
-	--darkGrayColor: #0E3746;
-	--mediumGrayColor: #ABA9BC;
-	--lightGrayColor: #D4D4CE;
-	--extraLightGrayColor: #F6F6F6;
-	--lightBlueColor: #00a8cc;
-	--orangeColor: #ff7853;
-	--greenColor: #45ba45;
-}
+:root {--h1Size: clamp(1.8rem, 3.3vw, 3.4rem); --h2Size: clamp(1.5rem, 2.5vw, 2.8rem); --h3Size: clamp(1.3rem, 2.2vw, 2.5rem); --h4Size: clamp(1.2rem, 2vw, 2rem); --h5Size: clamp(1.1rem, 1.8vw, 1.7rem); --pSize: clamp(1.1rem, 1.5vw, 1.3rem); --spanSize: clamp(1rem, 1.3vw, 1rem); --thin: 100; --light: 300; --regular: 400; --medium: 500; --bold: 700; --extra-bold: 800; --black: 900; --f1: #FFFFFF; --primaryColor: #BE2623; --secondaryColor: #0E3746; --darkGrayColor: #0E3746; --mediumGrayColor: #ABA9BC; --lightGrayColor: #D4D4CE; --extraLightGrayColor: #F6F6F6; --lightBlueColor: #00a8cc; --orangeColor: #ff7853; --greenColor: #45ba45; }
 
 
 html{scroll-behavior:smooth}
@@ -74,7 +47,8 @@ a:active{color:var(--extraLightGrayColor)}
 ::-moz-selection{background:var(--primaryColor);color:var(--white)}
 amp-img.contain img{-o-object-fit:contain;object-fit:contain}
 amp-img.cover img{-o-object-fit:cover;object-fit:cover}
-
+.amp-carousel-button-prev {background-color:rgba(230,0,0,.7); border: 1px solid rgba(255,255,255,.2); border-radius: 50%; cursor:pointer; background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' fill='%23fff'%3e%3cpath d='M4.2 247.5L151 99.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17L69.3 256l118.5 119.7c4.7 4.7 4.7 12.3 0 17L168 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 264.5c-4.7-4.7-4.7-12.3 0-17z'/%3e%3c/svg%3e") }
+ .amp-carousel-button-next {background-color:rgba(230,0,0,.7); border: 1px solid rgba(255,255,255,.2); border-radius: 50%; cursor:pointer; background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' fill='%23fff'%3e%3cpath d='M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z'/%3e%3c/svg%3e") }
 body{background:#777}
 .heroTitle{padding:50px 10vw;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}
 .heroTitle a{margin:20px auto}
@@ -115,10 +89,21 @@ a:hover{background-color:var(--greenColor)}
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="normalize.css"> -->
-	<!-- <link rel="stylesheet" href="config.css"> -->
-	<!-- <link rel="stylesheet" href="style.css"> -->
+
 
 
 
@@ -149,20 +134,133 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/advice.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice14.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice17.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice6.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice18.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice19.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice8.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/advice20.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice14.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice17.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice18.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice19.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice8.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/advice20.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+			</amp-carousel>
+		</div>
+	</div>
+
+
+
+
+	<div class="unit flex">
+		<div class="unitText flex">
+			<p>Reprodução de Sala de imprensa para versão com Amp, html, css e js.</p>
+			<a href="https://urakferraz.github.io/globo/" target="_blank">VER</a>
+		</div>
+		<div class="unitImgsWrapper grid">
+			<amp-carousel height="300" layout="fixed-height" type="carousel">
+				<amp-img src="lowres/globo1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo2.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo8.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo10.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo13.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo14.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo15.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo16.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo17.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo18.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo19.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo20.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo21.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo22.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo23.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/globo24.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+			</amp-carousel>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="unit flex">
+		<div class="unitText flex">
+			<p>Press Room MktMix</p>
+			<a href="https://urakferraz.github.io/mktmix1/" target="_blank">VER</a>
+		</div>
+		<div class="unitImgsWrapper grid">
+			<amp-carousel height="300" layout="fixed-height" type="carousel">
+				<amp-img src="lowres/mktmixa1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa9.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmixa8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+			</amp-carousel>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="unit flex">
+		<div class="unitText flex">
+			<p>Press Room</p>
+			<a href="https://urakferraz.github.io/pr1/" target="_blank">VER</a>
+		</div>
+		<div class="unitImgsWrapper grid">
+			<amp-carousel height="300" layout="fixed-height" type="carousel">
+				<amp-img src="lowres/pr11.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr15.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr12.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr16.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr17.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr13.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr18.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr110.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pr19.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+			</amp-carousel>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<div class="unit flex">
+		<div class="unitText flex">
+			<p>Teste com animações e WebGL.</p>
+			<a href="https://urakferraz.github.io/webGLTest/" target="_blank">VER</a>
+		</div>
+		<div class="unitImgsWrapper grid">
+			<amp-carousel height="300" layout="fixed-height" type="carousel">
+				<amp-img src="lowres/webgl8.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl3.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl2.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl1.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/webgl9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -176,15 +274,15 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/blackNovember.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/blackNovember9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/blackNovember9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -199,24 +297,24 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/cdipr.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr9.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr10.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr11.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr14.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr15.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr16.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr17.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdipr18.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr9.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr10.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr11.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr14.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr15.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr16.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr17.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdipr18.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -230,22 +328,22 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/cdn.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn14.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn15.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn16.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn6.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn17.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn107.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/cdn8.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn14.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn15.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn16.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn17.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn107.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/cdn8.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -262,17 +360,17 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/evento_lgpd--index.html.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/evento_lgpd--index.html6.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/evento_lgpd--index.html6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -289,26 +387,26 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/imax2020.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20201.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20209.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20208.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20201.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20202.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20203.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20204.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202010.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20206.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202011.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax20207.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202012.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202013.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202014.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202015.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202016.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202019.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202017.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/imax202018.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax2020.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20201.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20209.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20208.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20201.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20202.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20203.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20204.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202010.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20206.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202011.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax20207.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202012.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202013.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202014.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202015.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202016.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202019.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202017.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/imax202018.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -326,16 +424,16 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/infograficoFusao--index.html.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/infograficoFusao--index.html9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/infograficoFusao--index.html9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -354,14 +452,14 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/latam.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/latam4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/latam1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/latam5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/latam2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/latam6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/latam3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/latam7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/latam7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -378,21 +476,21 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/LPEasyMailing--index.html.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html6.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/LPEasyMailing--index.html14.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/LPEasyMailing--index.html14.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -412,28 +510,28 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/lpSuporte--index.html.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html6.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html14.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html15.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html17.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html20.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html18.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html21.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html19.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lpSuporte--index.html22.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html14.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html15.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html17.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html20.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html18.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html21.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html19.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lpSuporte--index.html22.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -453,16 +551,16 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/lptreinamento--index.htmla.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/lptreinamento--index.html9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.htmla.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/lptreinamento--index.html9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -482,19 +580,19 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/mktmix.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/mktmix12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/mktmix12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -514,16 +612,16 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/moto.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/moto9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/moto9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -542,20 +640,20 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/naturapr.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr3.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr8.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr9.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr10.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/naturapr13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr3.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr8.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr9.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr10.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/naturapr13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -581,19 +679,19 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/nr7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr76.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr71.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr77.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr72.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr73.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr78.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr77.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr74.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr79.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr75.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr710.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/nr711.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr76.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr71.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr77.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr72.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr73.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr78.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr77.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr74.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr79.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr75.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr710.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/nr711.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -622,16 +720,16 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/pressRoom22020.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220203.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220204.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220201.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220205.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220206.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220202.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220208.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220209.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoom220207.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom22020.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220203.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220204.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220201.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220205.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220206.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220202.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220208.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220209.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoom220207.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -658,21 +756,21 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/pressRoomAGCO--index.html.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html3.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/pressRoomAGCO11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html3.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/pressRoomAGCO11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -699,19 +797,19 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/prRpma--index.html.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/prRpma--index.html9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/prRpma--index.html9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -749,24 +847,24 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/Screenshot_2a.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_2.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_3.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_15.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_16.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_17.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_14.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_2a.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_2.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_3.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_15.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_16.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_17.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_14.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -796,20 +894,20 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/Screenshot_18.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_21.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_22.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_19.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_23.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_20.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_29.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_24.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_30.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_25.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_27.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_28.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_32.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_31.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_18.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_21.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_22.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_19.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_23.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_20.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_29.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_24.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_30.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_25.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_27.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_28.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_32.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_31.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -838,41 +936,41 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/Screenshot_33.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_33a.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_34.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_41.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_35.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_42.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_36.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_37.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_43.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_38.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_39.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_44.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_40.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_45.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_46.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_53.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_47.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_52.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_48.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_51.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_49.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_50.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_54.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_59.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_55.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_60.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_56.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_61.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_58.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_62.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_63.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_66.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_64.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_67.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_65.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_33.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_33a.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_34.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_41.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_35.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_42.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_36.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_37.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_43.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_38.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_39.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_44.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_40.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_45.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_46.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_53.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_47.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_52.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_48.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_51.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_49.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_50.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_54.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_59.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_55.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_60.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_56.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_61.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_58.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_62.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_63.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_66.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_64.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_67.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_65.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -908,16 +1006,16 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/Screenshot_75.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_70.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_76.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_71.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_77.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_72.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_78.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_73.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_79.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_74.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_75.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_70.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_76.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_71.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_77.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_72.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_78.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_73.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_79.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_74.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -949,22 +1047,22 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/Screenshot_80.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_87.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_81.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_88.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_82.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_91.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_83.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_92.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_84.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_93.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_85.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_94.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_86.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_95.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_89.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_90.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_80.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_87.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_81.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_88.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_82.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_91.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_83.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_92.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_84.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_93.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_85.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_94.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_86.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_95.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_89.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_90.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -998,24 +1096,24 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/Screenshot_96.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_109.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_98.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_110.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_100.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_111.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_101.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_112.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_103.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_113.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_105.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_114.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_106.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_116.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_107.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_117.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_108.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/Screenshot_118.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_96.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_109.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_98.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_110.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_100.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_111.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_101.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_112.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_103.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_113.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_105.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_114.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_106.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_116.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_107.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_117.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_108.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/Screenshot_118.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -1043,17 +1141,17 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/sescPR--index.html.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html3.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html6.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/sescPR--index.html11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html3.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html6.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/sescPR--index.html11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -1083,24 +1181,24 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/vwpr--index.html1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html7.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html8.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html9.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html3.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html10.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html4.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html15.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html5.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html6.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html17.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html18.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html14.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/vwpr--index.html19.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html7.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html8.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html9.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html3.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html10.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html4.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html15.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html5.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html17.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html18.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html14.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/vwpr--index.html19.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
@@ -1129,20 +1227,20 @@ a:hover{background-color:var(--greenColor)}
 		</div>
 		<div class="unitImgsWrapper grid">
 			<amp-carousel height="300" layout="fixed-height" type="carousel">
-				<amp-img src="lowres/weberpr.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr3.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr1.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr4.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr2.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr5.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr6.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr11.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr7.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr8.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr9.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr12.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr10.jpg" width="579" height="300" alt="sample image" class="sampleImage"></amp-img>
-				<amp-img src="lowres/weberpr13.jpg" width="137" height="300" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr3.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr1.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr4.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr2.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr5.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr6.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr11.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr7.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr8.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr9.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr12.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr10.jpg" width="579" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
+				<amp-img src="lowres/weberpr13.jpg" width="137" height="300" layout="fixed" alt="sample image" class="sampleImage"></amp-img>
 			</amp-carousel>
 		</div>
 	</div>
